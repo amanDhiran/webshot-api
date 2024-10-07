@@ -36,7 +36,7 @@ app.post('/screenshot', async (req, res) => {
 
       // Set viewport size based on device
       if (device === 'desktop') {
-        await page.setViewport({ width: 1920, height: 1080 });
+        await page.setViewport({ width: 1920, height: 1080 - 70 });
       } else if (device === 'tablet') {
         await page.setViewport({ width: 768, height: 1024 });
       } else if (device === 'mobile') {
